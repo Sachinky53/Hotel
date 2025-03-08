@@ -126,7 +126,7 @@
     display: contents;
 }
     .brand-name {
-        display: none;
+        display: contents;
     }
 
     .hamburger {
