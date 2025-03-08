@@ -91,6 +91,7 @@
 
 .nav-left {
     text-align: center;
+
 }
 
 .brand-name {
@@ -126,11 +127,12 @@
     display: contents;
 }
     .brand-name {
-        display: none;
+        display: contents;
     }
 
     .hamburger {
         display: block;
+
     }
 
     .nav-center {
