@@ -9,9 +9,30 @@
     align-items: center;
     gap: 5px;
 }
-
+.welcome{
+    color: black;
+    font-weight: bold;
+    font-size: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 40px;
+}
 .our-rooms {
     color: hsl(26, 90.70%, 53.70%);
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+}
+.explore-rooms  {
+    font-weight: 700;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.rooms{
+    font-weight: 700;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 .card-container {
     display: flex;
@@ -100,6 +121,10 @@
 .book-now:hover {
     background-color: #530ea0;
 }
+.wifi-logo{
+    display: flex;
+    align-items: center;
+}
 
 @media (max-width: 768px) {
     .card-container {
@@ -121,3 +146,8 @@
         height: 200px;
     }
 }
+    .welcome{
+        font-size: 35px;
+        text-align: center;
+    }
+

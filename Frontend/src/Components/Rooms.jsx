@@ -26,14 +26,14 @@ export default function Rooms() {
             <div className="room-container">
                 <div className="comapany-headings">
                     <div className="company-welcome">
-                        <h2 className='welcome'>Welcome to Mr. Hotelier</h2>
+                        <h2 className='welcome '>Welcome to Mr. Hotelier</h2>
                     </div>
                     <div className="our-rooms-details">
                         <h4 className='our-rooms'>---- Our Rooms ----</h4>
                     </div>
                     <div className="explore">
                         <h3 className='explore-rooms'>
-                            <p>Explore Our <span className='rooms' style={{ color: 'hsl(26, 90.70%, 53.70%)', fontWeight: 'bold', fontSize: '20px' }}>Rooms</span></p>
+                            <p>Explore Our <span className='rooms' style={{ color: 'hsl(26, 90.70%, 53.70%)', fontWeight: 'bold', fontSize: '30px' }}>Rooms</span></p>
                         </h3>
                     </div>
                 </div>
