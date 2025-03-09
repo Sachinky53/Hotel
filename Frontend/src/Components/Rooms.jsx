@@ -3,13 +3,22 @@ import './Rooms.css';
 import room01 from '/roomImages/room01.jpg'
 import room02 from '/roomImages/room02.jpg'
 import room03 from '/roomImages/room03.jpg'
+import { FaBed } from "react-icons/fa6";
+import { FaWifi } from "react-icons/fa6";
+
 
 
 export default function Rooms() {
     const RoomBooking = [
         { image: room01, title: "Luxury Room", price: "₹5000/Per Night" },
         { image: room02, title: "Deluxe Room", price: "₹4000/Per Night" },
+        { image: room03, title: "Suite Room", price: "₹7000/Per Night" },
+        { image: room03, title: "Suite Room", price: "₹7000/Per Night" },
+        { image: room03, title: "Suite Room", price: "₹7000/Per Night" },
         { image: room03, title: "Suite Room", price: "₹7000/Per Night" }
+
+
+
     ];
 
     return (
@@ -32,15 +41,33 @@ export default function Rooms() {
                 <div className="card-container">
                     {RoomBooking.map((room, index) => (
                         <div key={index} className="room-booking">
+                            <div className="hotel-room-image">
                             <img className='room-image' src={room.image} alt="room" />
+                            </div>
                             <div className="room-title">
                                 <p className='title'>{room.title}</p>
+                            </div>
+                            <div className="bed-wifi-section">
+                                <div className="bed">
+                                <FaBed /> <span className='count-room' >2 Beds</span> 
+
+                                </div>
+                                <div className="wifi-section">
+                                    <div className="wifi-logo">
+                                    <FaWifi /> <span className='wifi-title' >Wifi</span>
+
+                                    </div>
+                                </div>
                             </div>
                             <div className="room-pricing">
                                 <p className='pricing'>{room.price}</p>
                             </div>
+                            <div className="book-btn">
+                                <button className='book-now' >Book Now</button>
+                            </div>
                         </div>
                     ))}
+
                 </div>
             </div>
         </>

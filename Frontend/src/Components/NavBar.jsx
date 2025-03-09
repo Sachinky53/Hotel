@@ -66,26 +66,26 @@ export default function NavBar() {
   };
 
   // Handle form submission
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log("Signup Data:", formData);
-  //   setSignupOpen(false); // Close modal after submission
-  //   try {
-  //     const data = new FormData();
-  //     data.append("name", formData.name);
-  //     data.append("email", formData.email);
-  //     data.append("phoneNumber", formData.phoneNumber);
-  //     data.append("pincode", formData.pincode);
-  //     data.append("password", formData.password);
-  //     data.append("picture", formData.picture);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Signup Data:", formData);
+    setSignupOpen(false); // Close modal after submission
+    try {
+      const data = new FormData();
+      data.append("name", formData.name);
+      data.append("email", formData.email);
+      data.append("phoneNumber", formData.phoneNumber);
+      data.append("pincode", formData.pincode);
+      data.append("password", formData.password);
+      data.append("picture", formData.picture);
 
-  //     const response = axios.post("http://localhost:4000/api/user/register", data);
-  //     console.log(response.data);
+      const response = axios.post("http://localhost:4000/api/user/register", data);
+      console.log(response.data);
 
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   //when sign up is clicked when signup modal is open and login modal is closed
   const handleSignupClick = () => {
