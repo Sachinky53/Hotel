@@ -65,7 +65,7 @@ function Dashboard() {
             case "setting":
                 return <h1>Setting</h1>;
             default:
-                return null;
+                return <Hero/>;
         }
     };
   return (
@@ -169,69 +169,8 @@ function Dashboard() {
                         </ul>
                     </div>
                 </div>}
-                {sidebarIcon && <div className="dashboard-left min-h-44 w-20 bg-gray-200 p-4">
-                    <div className="logo-dashboard  w-3/4">
-                        <img src='./logo-light-streamline.png' alt='logo' className='w-full h-full' />
-                    </div>
-                    <div className="sidebar-content mt-5">
-                        <ul className='flex flex-col gap-4'>
-                            <li className='px-2 py-3 shadow-sm cursor-pointer rounded-md  hover:shadow-lg flex gap-3  items-center'
-                                onClick={() => handleClick("Hero")}
-                            > <MdDashboard className='h-6 w-6' />
-                            </li>
-
-                            <li className='px-2 py-3 shadow-sm cursor-pointer rounded-md  hover:shadow-lg  flex gap-3  items-center'
-                                onClick={() => handleClick("user")}
-                            ><FaUser className='h-6 w-6' /> </li>
-
-                            <li
-                                className="relative px-2 py-3 shadow-sm cursor-pointer rounded-md hover:shadow-lg flex gap-3 items-center group  "
-                            ><FaProductHunt className='h-6 w-6' />
-                                <ul className="absolute left-full top-0 hidden group-hover:block bg-gray-200 shadow-md rounded-md p-2 w-40 ">
-                                    <li
-                                        className="px-4 py-2 cursor-pointer hover:bg-gray-100 rounded-md"
-                                        onClick={() => handleClick("productList")}
-                                    >
-                                        Product List
-                                    </li>
-                                    <li
-                                        className="px-4 py-2 cursor-pointer hover:bg-gray-100 rounded-md"
-                                        onClick={() => handleClick("addProduct")}
-                                    >
-                                        Add Product
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className='relative px-2 py-3 shadow-sm cursor-pointer rounded-md  hover:shadow-lg flex gap-3  items-center group'> <BiSolidCategory className='h-6 w-6' />
-                            {/*sub menu*/}
-                                <ul className="absolute left-full top-0 hidden group-hover:block bg-gray-200 shadow-md rounded-md p-2 w-40">
-                                    <li
-                                        className="px-4 py-2 cursor-pointer hover:bg-gray-100 rounded-md"
-                                        onClick={() => handleClick("categoryList")}
-                                    >
-                                        Category List
-                                    </li>
-                                    <li
-                                        className="px-4 py-2 cursor-pointer hover:bg-gray-100 rounded-md"
-                                        onClick={() => handleClick("addCategory")}
-                                    >
-                                        Add Category
-                                    </li>
-                                </ul>
-                            </li>
-                            
-                            <li className='px-2 py-3 shadow-sm cursor-pointer rounded-md  hover:shadow-lg flex gap-3  items-center'
-                            onClick={() => handleClick("changePassword")}>
-                                <RiLockPasswordFill className='h-6 w-6' />
-                            </li>
-                            <li className='px-2 py-3 shadow-sm cursor-pointer rounded-md  hover:shadow-lg flex gap-3  items-center'
-                            // onClick={handleLogout}>
-                            >
-                                <IoLogOut className='h-6 w-6' />
-                            </li>
-                        </ul>
-                    </div>
-                </div>}
+                
+                               
                 {/* right panel header */}
                 <div className='dashboard-right h-full w-full'>
                     <div className="dashboard-header h-full w-full py-5 flex justify-between px-5 bg-gray-200 border border-gray-400 shadow-lg">
