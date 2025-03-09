@@ -1,6 +1,6 @@
 const express = require("express");
 require("dotenv").config();
-
+const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const connectDB = require("./config/db");
 const app = express();
@@ -9,7 +9,7 @@ const path = require("path");
 
 app.use(cors());
 app.use(express.json());
-
+app.use(cookieParser());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Connect to MongoDB
