@@ -321,6 +321,7 @@
     }
 
     .nav-center {
+      margin-top: 10px;
         position: absolute;
         top: 60px;
         left: 0;

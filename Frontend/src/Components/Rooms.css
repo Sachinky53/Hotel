@@ -1,6 +1,6 @@
 .room-container {
     margin-top: 5px;
-    height: 600px;
+    height: auto;
 }
 
 .comapany-headings {
@@ -39,7 +39,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .room-booking {
@@ -84,6 +84,7 @@
     align-items: center;
 }
 
+
 .bed, .wifi-section {
     display: flex;
     align-items: center;
@@ -124,6 +125,11 @@
 .wifi-logo{
     display: flex;
     align-items: center;
+}
+.room-divison{
+    height: 100px;
+    width: 100%;
+    background-color:rgb(235, 223, 246);
 }
 
 @media (max-width: 768px) {
