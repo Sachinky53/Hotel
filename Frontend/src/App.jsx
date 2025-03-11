@@ -5,6 +5,7 @@ import Rooms from './Components/Rooms'
 import Services from './Components/Pages/Services'
 import Membership from './Components/Pages/Membership'
 import DealsContainer from './Components/Pages/DealsContainer'
+import Menus from './Components/Pages/Menus'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
 <Services />
 <Membership />
 <DealsContainer />
+<Menus />
 </>
   )
 }
