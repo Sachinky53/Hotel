@@ -19,6 +19,9 @@ connectDB();
 //user routes
 app.use("/api/user", require("./routes/userRoutes"));
 
+//crousel routes
+app.use("/api/crousel", require("./routes/crouselRoutes"));
+
 //admin routes
 app.use("/api/admin", require("./routes/AdminRoutes"));
 // Connect to MongoDB

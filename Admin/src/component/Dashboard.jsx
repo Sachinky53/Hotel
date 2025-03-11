@@ -14,6 +14,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import { RiLockPasswordFill } from "react-icons/ri";
 import Hero from './Hero';
+import Crousel from './Crousel';
 
 
 function Dashboard() {
@@ -61,7 +62,7 @@ function Dashboard() {
             case "Features":
                 return <h1>Features</h1>;
             case "crousel":
-                return <h1>crousel</h1>;
+                return <Crousel/>;
             case "setting":
                 return <h1>Setting</h1>;
             default:
