@@ -1,6 +1,6 @@
 .room-container {
     margin-top: 5px;
-    height: 600px;
+    height: auto;
 }
 
 .comapany-headings {
@@ -10,11 +10,12 @@
     gap: 5px;
 }
 .welcome{
-    color: black;
-    font-weight: bold;
-    font-size: 45px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 40px;
+    font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family:serif;
 }
 .our-rooms {
     color: hsl(26, 90.70%, 53.70%);
@@ -39,7 +40,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .room-booking {
@@ -84,6 +85,7 @@
     align-items: center;
 }
 
+
 .bed, .wifi-section {
     display: flex;
     align-items: center;
@@ -124,6 +126,11 @@
 .wifi-logo{
     display: flex;
     align-items: center;
+}
+.room-divison{
+    height: 100px;
+    width: 100%;
+    background-color:rgb(235, 223, 246);
 }
 
 @media (max-width: 768px) {
