@@ -65,7 +65,6 @@ export default function NavBar() {
     setFormData({ ...formData, picture: e.target.files[0] });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Signup Data:", formData);

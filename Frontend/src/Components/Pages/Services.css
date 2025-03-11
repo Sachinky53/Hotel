@@ -24,13 +24,14 @@
     flex-direction: column;
     align-items: center;
 }
-.services-container-cards {
+.services-container-cards .swiper-wrapper {
     width: 100%;
     display: flex;
     
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 20px;
-    height: 370px;
+    height: auto;
 }
 
 .service-booking {
@@ -73,9 +74,9 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .services-container-cards {
-        flex-direction: column;
-        align-items: center;
+    .services-container-cards .swiper-wrapper {
+        display: flex;
+        margin-left:18px ;
     }
 
     .service-booking {

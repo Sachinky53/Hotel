@@ -14,9 +14,8 @@ export default function Rooms() {
         { image: room01, title: "Luxury Room", price: "₹5000/Per Night" },
         { image: room02, title: "Deluxe Room", price: "₹4000/Per Night" },
         { image: room03, title: "Suite Room", price: "₹7000/Per Night" },
-        { image: room03, title: "Suite Room", price: "₹7000/Per Night" },
-        { image: room03, title: "Suite Room", price: "₹7000/Per Night" },
         { image: room03, title: "Suite Room", price: "₹7000/Per Night" }
+
     ];
 
     return (

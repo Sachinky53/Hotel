@@ -8,7 +8,9 @@ import ResturentCatering from '/servicePicture/ResturentCatering.jpg';
 export default function Services() {
     const ServiceContainer = [
         { serviceImage: ServicesRoom, servicesTitle: "Hotel Rooms" },
-        { serviceImage: ResturentCatering, servicesTitle: "Resturent/Catering" }
+        { serviceImage: ResturentCatering, servicesTitle: "Resturent/Catering" },
+
+
     ];
 
     return (
@@ -17,7 +19,7 @@ export default function Services() {
                 <h4 className='our-services'>---- Our Services ----</h4>
                 <div className="explore-service-container">
                     <h3 className='explore-services'>
-                        <p> Explore Our <span className='services' style={{ color: 'hsl(26, 90.70%, 53.70%)', fontWeight: 'bold', fontSize: '30px' }} >Rooms</span></p>
+                        <p> Explore Our <span className='services' style={{ color: 'hsl(26, 90.70%, 53.70%)', fontWeight: 'bold', fontSize: '30px' }} >Services</span></p>
                     </h3>
                 </div>
             </div>

@@ -10,11 +10,12 @@
     gap: 5px;
 }
 .welcome{
-    color: black;
-    font-weight: bold;
-    font-size: 45px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 40px;
+    font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family:serif;
 }
 .our-rooms {
     color: hsl(26, 90.70%, 53.70%);
