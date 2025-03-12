@@ -8,7 +8,7 @@ import ResturentCatering from '/servicePicture/ResturentCatering.jpg';
 export default function Services() {
     const ServiceContainer = [
         { serviceImage: ServicesRoom, servicesTitle: "Hotel Rooms" },
-        { serviceImage: ResturentCatering, servicesTitle: "Resturent/Catering" },
+        { serviceImage: ResturentCatering, servicesTitle: "Resturent/Catering" }
 
 
     ];
