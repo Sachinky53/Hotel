@@ -77,7 +77,7 @@ export default function NavBar() {
       data.append("pincode", formData.pincode);
       data.append("password", formData.password);
       data.append("picture", formData.picture);
-
+ 
       const response = axios.post("http://localhost:4000/api/user/register", data);
       console.log(response.data);
 

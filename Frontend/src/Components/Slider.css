@@ -8,7 +8,7 @@
     width: 100%;
     margin: 0 auto;
     height: 70vh;
-}
+} 
 
 .mySwiper {
     width: 100%;
@@ -22,7 +22,7 @@
 }
 
 /* Fix image paths */
-.slide1 {
+/* .slide1 {
     background-image: url('/SliderImages/image01.jpg');
 }
 .slide2 {
@@ -33,4 +33,4 @@
 }
 .slide4 {
     background-image: url('/SliderImages/image04.jpg');
-}
+} */

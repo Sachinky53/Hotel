@@ -22,6 +22,15 @@ app.use("/api/user", require("./routes/userRoutes"));
 //crousel routes
 app.use("/api/crousel", require("./routes/crouselRoutes"));
 
+//feature routes
+app.use("/api/feature", require("./routes/FetureRoutes"));
+
+//facilities routes
+app.use("/api/facilities", require("./routes/FacilitiesRoute"));
+
+//room routes
+app.use("/api/room", require("./routes/RoomRoutes"));
+
 //admin routes
 app.use("/api/admin", require("./routes/AdminRoutes"));
 // Connect to MongoDB

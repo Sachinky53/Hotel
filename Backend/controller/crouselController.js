@@ -3,7 +3,8 @@ const asyncHandler = require("express-async-handler");
 
 const createCrousel = asyncHandler(async (req, res) => {
     const { title } = req.body;
-    console.log(req.file);
+    // console.log(req.body);
+
     const image =req.file?req.file.filename:"";
     const crousel = await Crousel.create({ title, image });
     res.status(200).json({message:"crousel created", crousel});
