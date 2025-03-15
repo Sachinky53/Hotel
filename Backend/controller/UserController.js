@@ -8,7 +8,7 @@ const createUser = asyncHandler(async (req, res) => {
     const { name, email, phoneNumber, pincode, password, confirmPassword} = req.body;
 
     //checking confirm password
-    console.log(password, confirmPassword);
+    // console.log(password, confirmPassword);
     if (password !== confirmPassword) {
         res.status(400);
         throw new Error("Passwords do not match");
@@ -29,7 +29,7 @@ const createUser = asyncHandler(async (req, res) => {
 
     //file path
     const picture = req.file?req.file.filename:"";
-    console.log(picture);
+    // console.log(picture);
 
     //hashed password
     const salt = await bcrypt.genSalt(10);
@@ -43,7 +43,6 @@ const createUser = asyncHandler(async (req, res) => {
         picture,
         pincode,
         password: hashedPassword,
-        role
     });
 
 
@@ -87,7 +86,8 @@ const loginUser = asyncHandler(async (req, res) => {
     //token cookie
     res.cookie("token", token, {
         httpOnly: true,
-        expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
+        //expires in 10 seconds
+        expires: new Date(Date.now() + 10 * 1000),
         secure: false,
     })
     res.status(200).json({
@@ -98,6 +98,59 @@ const loginUser = asyncHandler(async (req, res) => {
     });
 });
 
+//auth user logged in
+const authUser = asyncHandler(async (req, res) => {
+    try {
+        const token = req.cookies.token || req.header("Authorization")?.replace("Bearer ", "");
+        // console.log("get",token);
+        if (!token) {
+            res.status(401);
+            throw new Error("Not authorized");
+        }
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const user = await User.findById(decoded.id);
+        res.status(200).json({
+            success: true,
+            user,
+            message: "User authenticated in successfully",
+        });
+    } catch (error) {
+        res.status(401);
+        throw new Error("Not authorized");
+    }
+})
 
-module.exports = { createUser, loginUser };
+//get user
+
+const getUser = asyncHandler(async (req, res) => {
+    const user = await User.findById(req.user.id);
+    res.status(200).json({
+        success: true,
+        user,
+        message: "User fetched in successfully",
+    });
+});
+
+// logout user
+const logoutUser = asyncHandler(async (req, res) => {
+    // console.log(req.user.id);
+    await User.findByIdAndUpdate(req.user.id);
+    res.clearCookie("token");
+    res.status(200).json({
+        success: true,
+        message: "User logged out successfully",
+
+    })
+    // res.cookie("token", null, {
+    //     httpOnly: true,
+    //     expires: new Date(Date.now()),
+    //     secure: false,
+    // });
+    // res.status(200).json({
+    //     success: true,
+    //     message: "User logged out successfully",
+    // });
+})
+
+module.exports = { createUser, loginUser, authUser, getUser, logoutUser };
 

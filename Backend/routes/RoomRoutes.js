@@ -1,5 +1,5 @@
 const express = require("express");
-const { createRoom } = require("../controller/RoomController");
+const { createRoom, getRoomById, updateRoom, deleteRoom, getRoom } = require("../controller/RoomController");
 const router = express.Router();
 
 const multer = require("multer");
@@ -17,5 +17,9 @@ const upload = multer({ storage: storage });
     
 
 router.post("/createRoom",upload.single("roomImage"), createRoom);
+router.get("/getRoom", getRoom);
+router.delete("/deleteRoom:id", deleteRoom);
+router.put("/updateRoom/:id", updateRoom);
+router.get("/getRoomById:id", getRoomById);
 
 module.exports = router;

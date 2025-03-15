@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./NavBar.css";
 import { VscAccount } from "react-icons/vsc";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { CgProfile } from "react-icons/cg";
+
 import axios from "axios";
+import Profile from "./Pages/Profile";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +19,7 @@ export default function NavBar() {
     picture: "",
     pincode: "",
     password: "",
+    confirmPassword: "",
   });
   const [loginOpen, setLoginOpen] = useState(false);
   const [loginData, setLoginData] = useState({
@@ -26,11 +31,45 @@ export default function NavBar() {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
   };
 
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  //get cookie token
+  const getCookie = (name) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';')[0];
+  };
+
+  //check auth when the page reload
+  useEffect(() => {
+    const checkAuth =async () => {
+      const token = getCookie("token");
+    // console.log("yy",token);
+    if (token) {
+      // console.log("token", token); 
+      try {
+        const resp = await axios.get("http://localhost:4000/api/user/auth", { headers: { Authorization: `Bearer ${token}` } });
+        console.log(resp.data);
+        setIsAuthenticated(true);
+      } catch (error) {
+        setIsAuthenticated(false);
+      }
+    }
+    }
+    checkAuth();
+  }, [getCookie("token")]);
+  
+
+  //logout
+  const handleLogout = async() => {
+    document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    // window.location.reload();
+   window.location.href = "/";
+    
+    setIsAuthenticated(false);
+  };
  
-  const handleLoginSubmit = (e) => {
-    e.preventDefault();
-    console.log("Login Data:", loginData);
-  }
+  
   // Toggle menu
 
   const toggleMenu = () => {
@@ -65,7 +104,7 @@ export default function NavBar() {
     setFormData({ ...formData, picture: e.target.files[0] });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     console.log("Signup Data:", formData);
     setSignupOpen(false); // Close modal after submission
@@ -76,15 +115,44 @@ export default function NavBar() {
       data.append("phoneNumber", formData.phoneNumber);
       data.append("pincode", formData.pincode);
       data.append("password", formData.password);
+      data.append("confirmPassword", formData.confirmPassword);
       data.append("picture", formData.picture);
  
-      const response = axios.post("http://localhost:4000/api/user/register", data);
+      const response =await axios.post("http://localhost:4000/api/user/register", data);
       console.log(response.data);
 
     } catch (error) {
       console.error(error);
     }
   };
+
+  //login form
+
+  const handleLoginSubmit =async (e) => {
+    e.preventDefault();
+    // console.log("Login Data:", loginData);
+    try {
+      const resp =await axios.post("http://localhost:4000/api/user/login", loginData);
+      console.log(resp.data);
+      if (resp.status === 200) {
+        //cookie token
+        const token = resp.data.token;
+        const options = {
+          expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
+          httpOnly: true,
+        };
+        document.cookie = `token=${token}; ${options}`;
+        // window.location.href = "/admin";
+      }
+      setLoginOpen(false);
+      setIsAuthenticated(true);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+
+ 
 
   //when sign up is clicked when signup modal is open and login modal is closed
   const handleSignupClick = () => {
@@ -121,14 +189,44 @@ export default function NavBar() {
             <li><a href="#">Our Rooms</a></li>
             <li><a href="#">Contact Us</a></li>
 
+            <li><Link to="/">Home</Link></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><Link to="/ourRooms">OurRooms</Link></li>
           </ul>
         </div>
 
         <div className={`admin-control ${profileOpen ? "active" : ""}`} ref={profileRef}>
-          <button className="signup-btn" onClick={() => setSignupOpen(true)}>
+          {isAuthenticated ? (
+            <>
+             <div 
+      className="relative group"
+    >
+      {/* Profile Icon */}
+      <span className="admin-name cursor-pointer">
+        <CgProfile className="text-3xl" />
+      </span>
+
+      {/* Dropdown Menu (visible on hover) */}
+      <div className="absolute right-0 mt-2 w-40 bg-gray-200 shadow-lg rounded-lg z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+        <Link to={"/profile"}><button className="block w-full  px-1 py-4  hover:bg-gray-100" >Profile</button></Link>
+        <button className="block w-full  px-4 py-4 text-red-500 hover:bg-gray-100" onClick={handleLogout}>
+          Logout
+        </button>
+        
+      </div>
+    </div>
+            </>
+          ) : (
+            <>
+            <button className="signup-btn" onClick={() => setSignupOpen(true)}>
             Sign Up
           </button>
           <button className="login-btn" onClick={() => setLoginOpen(true)}>Log In</button>
+            </>
+
+          )}
+          
         </div>
 
         <div className="right-nav" ref={profileRef} onClick={toggleProfileMenu}>
@@ -220,7 +318,11 @@ export default function NavBar() {
   </div>
 )}
 
+{/* profile or login/signup button */}
+
+
         {/* Login Form Modal */}
+       
         {loginOpen && (
           <div className="login-modal">
             <div className="login-modal-content">

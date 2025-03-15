@@ -5,4 +5,4 @@ const router = express.Router();
 
 router.get('/getAdmin',isAdmin, getAllUsers);
 
-module.exports = router;
+module.exports = router; 
