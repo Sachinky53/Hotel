@@ -183,14 +183,8 @@ export default function NavBar() {
 
         <div className={`nav-center ${isOpen ? "active" : ""}`}>
           <ul className="nav-center-option">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Hotels</a></li>
-            <li><a href="#">Our Service</a></li>
-            <li><a href="#">Our Rooms</a></li>
-            <li><a href="#">Contact Us</a></li>
-
             <li><Link to="/">Home</Link></li>
-            <li><a href="#">About</a></li>
+            <li><Link to="/hotel">Hotels</Link></li>
             <li><a href="#">Services</a></li>
             <li><Link to="/ourRooms">OurRooms</Link></li>
           </ul>

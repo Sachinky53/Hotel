@@ -15,21 +15,24 @@ import DealsContainer from './Components/Pages/DealsContainer'
 import Menus from './Components/Pages/Menus'
 import Gallery from './Components/Pages/Gallery'
 import Footer from './Components/Footer'
+import Hotels from './Components/Pages/Hotels'
 
 export default function App() {
   return (
 <>
-
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile/>}/>
+        <Route path="/hotel" element={<Hotels/>}/>
+
+
         <Route path='/ourRooms' element={<OurRooms/>}/>
       </Routes>
-    </Router>
+      </Router>
 
 
-
+{/* 
 <NavBar />
 <Slider />
 <Rooms />
@@ -38,7 +41,8 @@ export default function App() {
 <DealsContainer />
 <Menus />
 <Gallery />
-<Footer />
+<Footer /> */}
+
 </>
   )
 }

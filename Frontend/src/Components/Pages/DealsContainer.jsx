@@ -10,10 +10,7 @@ const DealsContainer = () => {
     { DealImage: "https://via.placeholder.com/150" },
     { DealImage: "https://via.placeholder.com/150" },
     { DealImage: "https://via.placeholder.com/150" },
-    { DealImage: "https://via.placeholder.com/150" },
-    { DealImage: "https://via.placeholder.com/150" },
-    { DealImage: "https://via.placeholder.com/150" },
-    { DealImage: "https://via.placeholder.com/150" }
+    
   ];
 
   return (
