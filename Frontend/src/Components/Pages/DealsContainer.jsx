@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./DealsContainer.css";
-import ServicesRoom from "/servicePicture/ServicesRoom.jpg";  
+import ServicesRoom from "/servicePicture/ServicesRoom.jpg";
 
 const DealsContainer = () => {
   const [showAll, setShowAll] = useState(false);
 
   const cards = [
-    { DealImage: ServicesRoom},
+    { DealImage: ServicesRoom },
     { DealImage: "https://via.placeholder.com/150" },
     { DealImage: "https://via.placeholder.com/150" },
     { DealImage: "https://via.placeholder.com/150" },
@@ -19,8 +19,8 @@ const DealsContainer = () => {
   return (
     <div className="deals-container">
       <h2 className="deals-title">Deals with Appeal</h2>
-      <div className="deals-grid">
-        {(showAll ? cards : cards.slice(0, 6)).map((index,card) => (
+      <div className="deals-grid-container">
+        {(showAll ? cards : cards.slice(0, 6)).map((card, index) => (  // Fixed map function
           <div key={index} className="deals-card">
             <img src={card.DealImage} alt="Deal" className="deals-image" />
           </div>
