@@ -7,6 +7,7 @@ import Membership from './Components/Pages/Membership'
 import DealsContainer from './Components/Pages/DealsContainer'
 import Menus from './Components/Pages/Menus'
 import Gallery from './Components/Pages/Gallery'
+import Footer from './Components/Footer'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
 <DealsContainer />
 <Menus />
 <Gallery />
+<Footer />
 </>
   )
 }
