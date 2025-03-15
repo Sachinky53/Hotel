@@ -1,0 +1,130 @@
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background-color: #f8f9fa; 
+    border-bottom: 2px solid #ddd; 
+}
+
+.gallery-header-title {
+    display: flex;
+    align-items: center;
+}
+
+.gallery-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.gallery-view {
+    display: flex;
+    align-items: center;
+}
+
+.view-all-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #2e3c4a; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background-color: #2b537e; 
+}
+
+
+
+
+
+
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+    padding: 0 12px;
+  }
+  
+  .gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    cursor: pointer;
+    margin-bottom: 12px;
+  }
+  
+  .gallery .pics:hover {
+    filter: opacity(0.8);
+  }
+  
+  @media (max-width: 991px) {
+    .gallery {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+    }
+  }
+  
+
+  .model {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 999;
+  }
+  
+  .model.open {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .model img {
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+  
+  .close-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #ffff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
