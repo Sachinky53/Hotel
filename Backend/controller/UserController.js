@@ -8,6 +8,7 @@ const createUser = asyncHandler(async (req, res) => {
     const { name, email, phoneNumber, pincode, password, confirmPassword} = req.body;
 
     //checking confirm password
+    console.log(password, confirmPassword);
     if (password !== confirmPassword) {
         res.status(400);
         throw new Error("Passwords do not match");

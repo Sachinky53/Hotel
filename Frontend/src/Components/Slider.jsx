@@ -1,5 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import axios from 'axios';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -8,11 +9,26 @@ import 'swiper/css/navigation';
 
 import './Slider.css';
 import { Pagination, Navigation } from 'swiper/modules';
+import { useEffect } from 'react';
 
 export default function Slider() {
+    const [carousel, setCrousel] = React.useState([]);
+    const fetchCrousel = async () => {
+        try {
+            const response = await axios.get("http://localhost:4000/api/crousel/getCrousel");
+            const crouselData = response.data.crousel;
+            setCrousel(crouselData);
+            // console.log(crouselData);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    useEffect(() => {
+        fetchCrousel();
+    },[])
     return (
         <div className="container-slide">
-            <Swiper
+             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
@@ -21,11 +37,19 @@ export default function Slider() {
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide><div className="slide slide1"></div></SwiperSlide>
-                <SwiperSlide><div className="slide slide2"></div></SwiperSlide>
-                <SwiperSlide><div className="slide slide3"></div></SwiperSlide>
-                <SwiperSlide><div className="slide slide4"></div></SwiperSlide>
+                {carousel.length > 0 ? (
+                    carousel.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <div className="slide">
+                                <img src={`http://localhost:4000/uploads/${item.image}`} alt={item.title || "Slide"} />
+                                {/* <h3>{item.title}</h3> */}
+                            </div>
+                        </SwiperSlide>
+                    ))
+                ) : (
+                    <p>Loading slides...</p>
+                )}
             </Swiper>
-        </div>
+        </div> 
     );
 }

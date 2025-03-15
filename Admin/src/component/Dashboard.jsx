@@ -15,6 +15,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { RiLockPasswordFill } from "react-icons/ri";
 import Hero from './Hero';
 import Crousel from './Crousel';
+import Features from './Features';
+import Room from './Room';
 
 
 function Dashboard() {
@@ -58,9 +60,9 @@ function Dashboard() {
             case "Rating":
                 return <h1>Rating & Review</h1>;
             case "Room":
-                return <h1>Room</h1>;
+                return <Room/>;
             case "Features":
-                return <h1>Features</h1>;
+                return <Features/>;
             case "crousel":
                 return <Crousel/>;
             case "setting":
