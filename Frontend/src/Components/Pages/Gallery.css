@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 25px;
-    background-color: #f8f9fa; 
+    background-color:  #dcdcdc;
     border-bottom: 2px solid #ddd; 
 }
 
@@ -39,11 +39,6 @@
 .view-all-btn:hover {
     background-color: #2b537e; 
 }
-
-
-
-
-
 
 .gallery {
     -webkit-column-count: 3;
