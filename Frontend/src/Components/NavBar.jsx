@@ -187,6 +187,9 @@ export default function NavBar() {
             <li><Link to="/hotel">Hotels</Link></li>
             <li><a href="#">Services</a></li>
             <li><Link to="/ourRooms">OurRooms</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
+
+
           </ul>
         </div>
 

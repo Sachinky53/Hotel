@@ -16,6 +16,7 @@ import Menus from './Components/Pages/Menus'
 import Gallery from './Components/Pages/Gallery'
 import Footer from './Components/Footer'
 import Hotels from './Components/Pages/Hotels'
+import Contact from './Components/Pages/Contact'
 
 export default function App() {
   return (
@@ -25,9 +26,9 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/hotel" element={<Hotels/>}/>
-
-
         <Route path='/ourRooms' element={<OurRooms/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+
       </Routes>
       </Router>
 
