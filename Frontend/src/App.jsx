@@ -29,14 +29,7 @@ export default function App() {
 
 
 
-<NavBar />
-<Slider />
-<Rooms />
-<Services />
-<Membership />
-<DealsContainer />
-<Menus />
-<Gallery />
+
 </>
   )
 }
