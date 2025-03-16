@@ -1,21 +1,36 @@
 /* Booking Container */
 .booking-container {
+  display: flex;
+  justify-content: center;
   text-align: center;
   /* background: #ff6600; */
-  background-color: #0c141dc9; 
-
+  /* background-color: #0c141dc9;  */
+  background-image: url('./NavBackground/SlidePic.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
   padding: 20px;
-  height: 300px;
+  height: 400px;
+  position: relative;
+  border-radius: 0px 0px 20% 20% ;
+  
 }
 
 .booking-title {
-  color: white;
-  font-size: 22px;
-  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: #d90429; 
+  font-family: "Poppins", serif; 
+  font-size: 32px; 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  letter-spacing: 1.5px; 
+  text-align: center; 
 }
 
-/* Booking Box */
+
 .booking-box {
+  border: 1px solid black;
   background: white;
   padding: 20px;
   border-radius: 10px;
@@ -24,11 +39,15 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
-  max-width: 900px;
+  max-width: 80%;
   margin: auto;
+  position: absolute;
+  bottom: -46px;
+  height: 200px;
+  
+
 }
 
-/* Input Group */
 .input-group {
   position: relative;
   width: 200px;
@@ -39,14 +58,12 @@
   flex-direction: column;
 }
 
-/* Legend Styling */
 .input-group legend {
   font-size: 12px;
   color: gray;
   padding: 0 5px;
 }
 
-/* Input Field */
 .input-field,
 .date-input {
   width: 100%;
@@ -57,18 +74,15 @@
   background: transparent;
 }
 
-/* Focus Effect */
 .input-group:focus-within {
   /* border-color: #ff6600; */
    border-color: #4d5c6a; 
 
 }
 
-/* Search Button */
 .search-button {
   background-color: #2e3c4a; 
 
-  /* background: #ff6600; */
   color: white;
   padding: 10px 20px;
   border: none;

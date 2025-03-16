@@ -1,45 +1,51 @@
 import React from "react";
+import NavBar from '../NavBar'
 import "./Hotels.css";
 
 const Hotels = () => {
   return (
-    <div className="booking-container">
-      <h2 className="booking-title">Book Hotels and Homestays</h2>
-      <div className="booking-box">
+    <>
+      <NavBar />
+      <div className="booking-container">
+        <h2 className="booking-title">Book Hotels and Homestays</h2>
+        <div className="booking-box">
 
-        {/* Where to */}
-        <fieldset className="input-group">
-          <legend>Where to</legend>
-          <input
-            type="text"
-            placeholder="e.g. - Area, Landmark or Property Name"
-            className="input-field"
-          />
-        </fieldset>
+          {/* Where to */}
+          <fieldset className="input-group">
+            <legend>Where to</legend>
+            <input
+              type="text"
+              placeholder="e.g. - Area, Landmark or Property Name"
+              className="input-field"
+            />
+          </fieldset>
 
-        {/* Check-in */}
-        <fieldset className="input-group">
-          <legend>Check-in</legend>
-          <input type="date" className="date-input" />
-        </fieldset>
+          {/* Check-in */}
+          <fieldset className="input-group">
+            <legend>Check-in</legend>
+            <input type="date" className="date-input" />
+          </fieldset>
 
-        {/* Check-out */}
-        <fieldset className="input-group">
-          <legend>Check-out</legend>
-          <input type="date" className="date-input" />
-        </fieldset>
+          {/* Check-out */}
+          <fieldset className="input-group">
+            <legend>Check-out</legend>
+            <input type="date" className="date-input" />
+          </fieldset>
 
-        {/* Guests & Rooms */}
-        <fieldset className="input-group">
-          <legend>Guests & Rooms</legend>
-          <input type="text" className="input-field" />
-          
-        </fieldset>
+          {/* Guests & Rooms */}
+          <fieldset className="input-group">
+            <legend>Guests & Rooms</legend>
+            <input type="text" className="input-field" />
 
-        {/* Search Button */}
-        <button className="search-button">SEARCH</button>
+          </fieldset>
+
+          {/* Search Button */}
+          <div className="search-btn-hotel" >
+            <button className="search-button">SEARCH</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
