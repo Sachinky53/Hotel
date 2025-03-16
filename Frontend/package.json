@@ -18,7 +18,6 @@
     "react-icons": "^5.5.0",
     "react-image-gallery": "^1.4.0",
     "react-router-dom": "^7.3.0",
-
     "swiper": "^11.2.5",
     "tailwindcss": "^4.0.12"
   },

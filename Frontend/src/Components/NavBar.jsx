@@ -190,7 +190,7 @@ export default function NavBar() {
           </ul>
         </div>
 
-        <div className={`admin-control ${profileOpen ? "active" : ""}`} ref={profileRef}>
+        <div className={`admin-control ${profileOpen ? "active" : ""}`} ref={profileRef} >
           {isAuthenticated ? (
             <>
              <div 
