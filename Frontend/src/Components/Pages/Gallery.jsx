@@ -27,7 +27,7 @@ function Gallery() {
         { id: 7, imgSrc: gallery07 },
         { id: 8, imgSrc: gallery08 },
         { id: 9, imgSrc: gallery09 },
-        { id: 10, imgSrc: gallery10 },
+        { id: 10, imgSrc: gallery10 }
     ];
 
     const getImg = (imgSrc) => {

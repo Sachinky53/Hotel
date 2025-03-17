@@ -6,7 +6,7 @@ export default function Membership() {
             <div className="Membership-layout-container">
                 <div className="membership-heading">
                     <h2 className='membership-title-heading' >
-                        Become a Marriott Bonvoy Member
+                        Become a Mr. Hotelier Member
                     </h2>
                     <div className="membership-container-details">
                         <p className='Membership-details' >
