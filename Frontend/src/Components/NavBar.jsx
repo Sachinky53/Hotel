@@ -231,7 +231,7 @@ export default function NavBar() {
           
         </div>
 
-        <div className="right-nav" ref={profileRef} onClick={toggleProfileMenu}>
+        <div className="right-nav right-ns" ref={profileRef} onClick={toggleProfileMenu}>
           <VscAccount />
         </div>
 
