@@ -13,7 +13,7 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   position: relative;
-  background-image: url('/NavBackground/NavImage.jpg');
+  /* background-image: url('/NavBackground/NavImage.jpg'); */
   background-size:  100%; /* Puri space cover karega */
   background-position: center;
   background-repeat: no-repeat;
@@ -33,11 +33,11 @@
   gap: 20px;
 }
 
-.nav-center-option li a {
+.nav-center-option li  {
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: #fff;
   transition: color 0.3s ease-in-out;
 }
 
@@ -96,12 +96,18 @@
 
 .nav-left {
   text-align: center;
-}
-
-.brand-name {
   font-size: 28px;
   font-weight: bold;
-  color: #222;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family:serif;
+}
+
+.brandName{
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-family:serif;
@@ -141,6 +147,7 @@
 .modal-title {
   font-weight: 900;
   font-size: 30px;
+  color: #000;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 15px;
 }
@@ -186,6 +193,10 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  color: #000;
+}
+#pincode{
+  color: #000;
 }
 
 /* Single Input Styling */

@@ -13,7 +13,7 @@ import Footer from './Footer'
 function Home() {
   return (
     <>
-    <NavBar />
+    {/* <NavBar activePage="hotels"/> */}
     <Slider />
     <Rooms />
     <Services />

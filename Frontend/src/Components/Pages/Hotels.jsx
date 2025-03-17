@@ -3,10 +3,22 @@ import NavBar from '../NavBar'
 import "./Hotels.css";
 
 const Hotels = () => {
+  const navColors = {
+    home: "white",
+    hotels: 'red',
+    services: 'blue',
+    ourRooms: 'green',
+    contact: 'orange',
+  }
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="booking-container">
+      <div className="nav-overlay">
+          <NavBar activePage="hotels" />
+        </div>
+        
+        
         <h2 className="booking-title">Book Hotels and Homestays</h2>
         <div className="booking-box">
 

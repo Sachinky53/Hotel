@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to right, #ff9966, #ff5e62);
+    /* background: linear-gradient(to right, #ff9966, #ff5e62); */
 }
 
 .Contact-us-heading {
@@ -39,6 +39,16 @@
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
 }
+.map-container {
+    width: 100%;
+    height: 300px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
 
 .contact-us-container {
     width: 50%;
@@ -75,8 +85,29 @@ label {
     font-weight: bold;
     color: #333;
 }
+.nav-center-option li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+    padding: 5px 10px;
+    transition: background 0.2s;
+  }
 
-input, textarea {
+.common-li-color {
+    background-color: #2e3c4a;  
+    color: #333;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .brand-name{
+    font-size: 40px;
+  font-weight: bold;
+  color: #2e3c4a;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family:serif;
+  }
+.input-box {
     width: 100%;
     padding: 12px;
     margin-top: 5px;
@@ -88,7 +119,7 @@ input, textarea {
     background-color: #f3f3f3;
 }
 
-input:focus, textarea:focus {
+.input-box:focus {
     outline: none;
     border-color: #ff5e62;
     box-shadow: 0px 0px 10px rgba(255, 94, 98, 0.5);
