@@ -1,9 +1,11 @@
 import React from 'react';
 import './Menus.css'; 
+import Menu01 from '/MenuImage/Menu01.jpg'
+import Menu02 from '/MenuImage/Menu02.jpg'
 
 const menuItems = [
-  { id: 1, image: 'https://source.unsplash.com/400x300/?food' },
-  { id: 2, image: 'https://source.unsplash.com/400x300/?dishes' },
+  { id: 1, image: Menu01},
+  { id: 2, image: Menu02 },
  
 ];
 
