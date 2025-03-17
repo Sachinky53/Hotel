@@ -1,15 +1,24 @@
 import { useState } from "react";
 import "./DealsContainer.css";
-import ServicesRoom from "/servicePicture/ServicesRoom.jpg";
+// import ServicesRoom from "/servicePicture/ServicesRoom.jpg";
+import Deals01 from '/DealsImage/Deals01.jpg'
+import Deals02 from '/DealsImage/Deals02.jpg'
+import Deals03 from '/DealsImage/Deals03.jpg'
+import Deals04 from '/DealsImage/Deals04.jpg'
+import Deals05 from '/DealsImage/Deals05.jpg'
+import Deals06 from '/DealsImage/Deals06.jpg'
 
 const DealsContainer = () => {
   const [showAll, setShowAll] = useState(false);
 
   const cards = [
-    { DealImage: ServicesRoom },
-    { DealImage: "https://via.placeholder.com/150" },
-    { DealImage: "https://via.placeholder.com/150" },
-    { DealImage: "https://via.placeholder.com/150" },
+    { DealImage: Deals01 },
+    { DealImage: Deals02 },
+    { DealImage: Deals03 },
+    { DealImage: Deals04 },
+    { DealImage: Deals05 },
+    { DealImage: Deals06 },
+
     
   ];
 
