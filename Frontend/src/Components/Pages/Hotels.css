@@ -1,10 +1,15 @@
 
 
+
 /* Booking Container */
+
 .booking-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   text-align: center;
+
   /* background: #ff6600;
   background-color: #0c141dc9;  */
   background-image: url('./NavBackground/SlidePic.jpg');
@@ -17,6 +22,17 @@ background-position: center;
   border-radius: 0px 0px 20% 20% ;
 
   
+
+  background-image: url('./NavBackground/SlidePic.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  height: 450px;
+  position: relative;
+  border-radius: 0 0 15% 15%;
+  width: 100%;
+
 }
 /* Updated CSS */
 
@@ -48,81 +64,163 @@ background-position: center;
 .booking-title {
   margin-top: 30px;
   margin-bottom: 20px;
-  color: #d90429; 
-  font-family: "Poppins", serif; 
-  font-size: 32px; 
-  font-weight: 700; 
-  text-transform: uppercase; 
-  letter-spacing: 1.5px; 
-  text-align: center; 
+  color: #d90429;
+  font-family: "Poppins", serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
 }
 
-
 .booking-box {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
-  max-width: 80%;
+  width: 90%;
+  max-width: 1100px;
   margin: auto;
   position: absolute;
-  bottom: -46px;
-  height: 200px;
-  
-
+  bottom: -60px;
+  min-height: auto; 
+  height: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .input-group {
   position: relative;
-  width: 200px;
+  width: 250px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 10px;
   display: flex;
   flex-direction: column;
-}
-
-.input-group legend {
-  font-size: 12px;
-  color: gray;
-  padding: 0 5px;
+  flex: 1;
+  min-width: 180px;
 }
 
 .input-field,
 .date-input {
   width: 100%;
-  padding: 5px;
-  font-size: 14px;
+  padding: 8px;
+  font-size: 15px;
   border: none;
   outline: none;
   background: transparent;
 }
 
 .input-group:focus-within {
-  /* border-color: #ff6600; */
-   border-color: #4d5c6a; 
-
+  border-color: #4d5c6a;
 }
 
 .search-button {
-  background-color: #2e3c4a; 
-
+  background-color: #2e3c4a;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border: none;
-  border-radius: 5px;
-  font-size: 14px;
+  border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
-  align-self: flex-end;
+  transition: background 0.3s ease-in-out;
 }
 
 .search-button:hover {
-  /* background: #e65c00; */
   background: #9d9691;
+}
 
+
+@media (max-width: 480px) {
+  .booking-container {
+    height: auto;
+    padding: 15px;
+    border-radius: 0;
+  }
+
+  .booking-title {
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+
+  .booking-box {
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    bottom: -40px;
+    min-height: auto;
+    height: auto; /* Auto height based on content */
+  }
+
+  .input-group {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .search-button {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .booking-container {
+    height: auto;
+  }
+
+  .booking-title {
+    font-size: 24px;
+  }
+
+  .booking-box {
+    flex-direction: column;
+    padding: 15px;
+    width: 90%;
+    bottom: -45px;
+    height: auto;
+  }
+
+  .input-group {
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .booking-container {
+    height: 420px;
+  }
+
+  .booking-title {
+    font-size: 28px;
+  }
+
+  .booking-box {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    bottom: -50px;
+    padding: 20px;
+    height: auto;
+  }
+
+  .input-group {
+    width: 45%;
+  }
+
+  .search-button {
+    width: 100%;
+  }
 }
