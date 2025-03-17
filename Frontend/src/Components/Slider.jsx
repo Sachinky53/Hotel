@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 import './Slider.css';
 import { Pagination, Navigation } from 'swiper/modules';
 import { useEffect } from 'react';
+import Hotels from './Pages/Hotels';
 
 export default function Slider() {
     const [carousel, setCrousel] = React.useState([]);
@@ -27,29 +28,6 @@ export default function Slider() {
         fetchCrousel();
     },[])
     return (
-        <div className="container-slide">
-             <Swiper
-                slidesPerView={1}
-                spaceBetween={30}
-                loop={true}
-                pagination={{ clickable: true }}
-                navigation={true}
-                modules={[Pagination, Navigation]}
-                className="mySwiper"
-            >
-                {carousel.length > 0 ? (
-                    carousel.map((item, index) => (
-                        <SwiperSlide key={index}>
-                            <div className="slide">
-                                <img src={`http://localhost:4000/uploads/${item.image}`} alt={item.title || "Slide"} />
-                                {/* <h3>{item.title}</h3> */}
-                            </div>
-                        </SwiperSlide>
-                    ))
-                ) : (
-                    <p>Loading slides...</p>
-                )}
-            </Swiper>
-        </div> 
+        <Hotels />
     );
 }

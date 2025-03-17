@@ -14,9 +14,13 @@ import Hotels from './Pages/Hotels'
 function Home() {
   return (
     <>
+
+    {/* <NavBar activePage="hotels"/> */}
+    <Slider />
     {/* <NavBar /> */}
     <Hotels />
     {/* <Slider /> */}
+
     <Rooms />
     <Services />
     <Membership />
