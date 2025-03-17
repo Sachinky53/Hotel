@@ -5,7 +5,7 @@ import Footer from '../Footer'
 export default function Contact() {
     return (
         <>
-            <NavBar activePage="common-li-color" brandName="brand-name" />
+            <NavBar />
             <div
                 className="profile-header w-full h-60 flex justify-center items-center text-7xl font-bold font-sans text-white shadow-lg"
                 style={{ background: 'linear-gradient(135deg, #b5184a,#611045, #1c060d)' }}

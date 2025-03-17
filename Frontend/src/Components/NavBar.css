@@ -33,11 +33,11 @@
   gap: 20px;
 }
 
-.nav-center-option li  {
+.nav-center-option li a{
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
+  color: #333;
   transition: color 0.3s ease-in-out;
 }
 
@@ -98,7 +98,7 @@
   text-align: center;
   font-size: 28px;
   font-weight: bold;
-  color: #fff;
+  color: #333;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-family:serif;
@@ -107,7 +107,7 @@
 .brandName{
   font-size: 28px;
   font-weight: bold;
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-family:serif;
@@ -364,6 +364,7 @@
   .nav-center-option li {
     margin-bottom: 10px;
     font-size: 18px;
+    color: #333;
     font-weight: 600;
   }
 

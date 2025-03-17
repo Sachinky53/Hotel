@@ -8,7 +8,7 @@ function OurRooms() {
   const [bookNow, setBookNow] = React.useState(false);
   return (
     <>
-      <NavBar activePage="common-li-color" brandName="brand-name" />
+      <NavBar />
       <div className='w-full '>
 
         <div className='w-full flex justify-center flex-col gap-14  items-center'>

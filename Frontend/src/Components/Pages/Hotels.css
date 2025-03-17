@@ -23,21 +23,14 @@ background-position: center;
 
   
 
-  background-image: url('./NavBackground/SlidePic.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
-  height: 450px;
-  position: relative;
-  border-radius: 0 0 15% 15%;
+
   width: 100%;
 
 }
 /* Updated CSS */
 
 
-.nav-overlay {
+/* .nav-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -45,19 +38,17 @@ background-position: center;
   z-index: 10;
   background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(46, 43, 43, 0.5));
   
-}
+} 
 .activePage{ 
  
-  background-color: #d90429;  /* Change to your desired color */
+  background-color: #d90429;
   color: black;
-  border-radius: 5px;
-  font-weight: bold;
-}
+
 
 /* Make navbar links visible on image */
-.nav-overlay  {
+/* .nav-overlay  {
   color: white;
-}
+} */
 
 /* Adjust title position */
 
@@ -224,3 +215,5 @@ background-position: center;
     width: 100%;
   }
 }
+
+

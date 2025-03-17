@@ -8,7 +8,7 @@ import axios from "axios";
 import Profile from "./Pages/Profile";
 import { Link } from "react-router-dom";
 
-export default function NavBar({activePage, itemColors={},brandName}) {
+export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
   const [signupOpen, setSignupOpen] = useState(false);
@@ -170,6 +170,11 @@ export default function NavBar({activePage, itemColors={},brandName}) {
       setProfileOpen(false);
     }
   }
+  const handleNavClick = (path) => {
+    navigate(path);
+    setIsOpen(false);  // Close the menu
+  };
+  
   return (
     <>
       <nav className="nav-bar">
@@ -178,16 +183,16 @@ export default function NavBar({activePage, itemColors={},brandName}) {
         </div>
 
         <div className="nav-left">
-          <h2 className={brandName}> Hotelier</h2>
+          <h2 > Hotelier</h2>
         </div>
 
         <div className={`nav-center ${isOpen ? "active" : ""} `}>
           <ul className="nav-center-option">
-            <li className={activePage }><Link to="/">Home</Link></li>
-            <li className={activePage }><Link to="/hotel">Hotels</Link></li>
-            <li className={activePage }><a href="#">Services</a></li>
-            <li className={activePage}><Link to="/ourRooms">OurRooms</Link></li>
-            <li  className={activePage }><Link to="/contact">Contact Us</Link></li>
+            <li ><Link to="/">Home</Link></li>
+            <li ><Link to="/hotel">Hotels</Link></li>
+            <li ><a href="#">Services</a></li>
+            <li ><Link to="/ourRooms">OurRooms</Link></li>
+            <li ><Link to="/contact">Contact Us</Link></li>
 
 
           </ul>

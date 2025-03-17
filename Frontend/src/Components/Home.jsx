@@ -1,6 +1,6 @@
 import React from 'react'
 // import NavBar from './NavBar'
-// import Slider from './Slider'
+import Slider from './Slider'
 import Rooms from './Rooms'
 import Services from './Pages/Services'
 import Membership from './Pages/Membership'
@@ -18,7 +18,7 @@ function Home() {
     {/* <NavBar activePage="hotels"/> */}
     <Slider />
     {/* <NavBar /> */}
-    <Hotels />
+    {/* <Hotels /> */}
     {/* <Slider /> */}
 
     <Rooms />
