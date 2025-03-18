@@ -17,9 +17,7 @@ function Home() {
 
     {/* <NavBar activePage="hotels"/> */}
     <Slider />
-    {/* <NavBar /> */}
-    {/* <Hotels /> */}
-    {/* <Slider /> */}
+    
 
     <Rooms />
     <Services />
