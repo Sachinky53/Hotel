@@ -9,6 +9,7 @@ import Menus from './Pages/Menus'
 import Gallery from './Pages/Gallery'
 import Footer from './Footer'
 import Hotels from './Pages/Hotels'
+import OurBrands from './Pages/OurBrands'
 
 
 function Home() {
@@ -27,6 +28,7 @@ function Home() {
     <DealsContainer />
     <Menus />
     <Gallery />
+    <OurBrands />
     <Footer />
     
     </>

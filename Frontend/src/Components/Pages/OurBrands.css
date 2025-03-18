@@ -1,0 +1,138 @@
+/* Container Layout */
+.brands-container-layout {
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Heading Styles */
+.brand-heading {
+    margin-bottom: 20px;
+}
+
+.brands-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Marquee Container */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+
+}
+
+/* Brand Logos inside Marquee */
+.logo-brand {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Brand Logo Text Styles */
+.brand-logo-dristi,
+.brand-logo-happiness,
+.brand-logo-rich {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Unique Font Styles with Cool Effects */
+.brand-logo-dristi {
+    font-family: "Satisfy", cursive;
+    color: #ff5733;
+    text-shadow: 2px 2px 5px rgba(255, 87, 51, 0.6);
+}
+
+.brand-logo-happiness {
+    font-family: "Bungee", sans-serif;
+    color: #28a745;
+    text-transform: lowercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px rgba(40, 167, 69, 0.5);
+}
+
+.brand-logo-rich {
+    font-family: "Press Start 2P", cursive;
+    color: #007bff;
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Unique First-Letter Styles */
+.brand-logo-dristi::first-letter {
+    color: #ff0000;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.brand-logo-happiness::first-letter {
+    color: #ffcc00;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.brand-logo-rich::first-letter {
+    color: #00ff99;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Hover Effects */
+.brand-logo-dristi:hover,
+.brand-logo-happiness:hover,
+.brand-logo-rich:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .brands-title {
+        font-size: 1.8rem;
+    }
+
+    .brand-logo-dristi,
+    .brand-logo-happiness,
+    .brand-logo-rich {
+        font-size: 1.3rem;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .brands-title {
+        font-size: 1.5rem;
+    }
+
+    .brand-logo-dristi,
+    .brand-logo-happiness,
+    .brand-logo-rich {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-title {
+        font-size: 1.3rem;
+    }
+
+    .brand-logo-dristi,
+    .brand-logo-happiness,
+    .brand-logo-rich {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}

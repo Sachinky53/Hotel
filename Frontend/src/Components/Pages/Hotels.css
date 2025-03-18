@@ -1,58 +1,22 @@
-
-
-
 /* Booking Container */
-
 .booking-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  /* background: #ff6600;
-  background-color: #0c141dc9;  */
-  background-image: url('/NavBackground/SlidePic.jpg');
-
+  background-image: url("/NavBackground/SlidePic.jpg");
   background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+  background-size: cover;
+  background-position: center;
   padding: 80px;
   height: 400px;
   position: relative;
-  border-radius: 0px 0px 20% 20% ;
-
-  
-
-
+  border-radius: 0px 0px 20% 20%;
   width: 100%;
-
 }
-/* Updated CSS */
 
-
-/* .nav-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(46, 43, 43, 0.5));
-  
-} 
-.activePage{ 
- 
-  background-color: #d90429;
-  color: black;
-
-
-/* Make navbar links visible on image */
-/* .nav-overlay  {
-  color: white;
-} */
-
-/* Adjust title position */
-
+/* Booking Title */
 .booking-title {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -65,8 +29,8 @@ background-position: center;
   text-align: center;
 }
 
+/* Booking Box */
 .booking-box {
-  /* border: 1px solid black; */
   background: white;
   padding: 20px;
   border-radius: 12px;
@@ -80,11 +44,12 @@ background-position: center;
   margin: auto;
   position: absolute;
   bottom: -60px;
-  min-height: auto; 
+  min-height: auto;
   height: auto;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Input Group */
 .input-group {
   position: relative;
   width: 250px;
@@ -97,6 +62,7 @@ background-position: center;
   min-width: 180px;
 }
 
+/* Input Field */
 .input-field,
 .date-input {
   width: 100%;
@@ -107,10 +73,12 @@ background-position: center;
   background: transparent;
 }
 
+/* Focus Effect */
 .input-group:focus-within {
   border-color: #4d5c6a;
 }
 
+/* Search Button */
 .search-button {
   background-color: #2e3c4a;
   color: white;
@@ -126,7 +94,7 @@ background-position: center;
   background: #9d9691;
 }
 
-
+/* Media Queries */
 @media (max-width: 480px) {
   .booking-container {
     height: auto;
@@ -147,7 +115,7 @@ background-position: center;
     padding: 12px;
     bottom: -40px;
     min-height: auto;
-    height: auto; /* Auto height based on content */
+    height: auto;
   }
 
   .input-group {
@@ -217,4 +185,167 @@ background-position: center;
   }
 }
 
+/* --------------------------- */
+/* Guests & Rooms Modal Styles */
+/* --------------------------- */
 
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+/* Modal Title */
+.selection-guest-room {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Guest Option Container */
+.guest-option-adults,
+.guest-option-children {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Label Styling */
+.guest-option-adults label,
+.guest-option-children label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2e3c4a;
+}
+
+/* Counter Container */
+.counter-adults,
+.counter-children {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Counter Button Styling */
+.less-operation-adults,
+.add-operation-adults,
+.less-children-btn,
+.add-children-btn {
+  background-color: #2e3c4a;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.less-operation-adults:hover,
+.add-operation-adults:hover,
+.less-children-btn:hover,
+.add-children-btn:hover {
+  background-color: #9d9691;
+}
+
+/* Counter Value */
+.adults-operation,
+.children-operation {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Modal Action Buttons */
+.modal-action-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Cancel Button */
+.cancel-btn-guest-room {
+  background-color: #d90429;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cancel-btn-guest-room:hover {
+  background-color: #b70320;
+}
+
+/* Ok Button */
+.ok-btn-guest-room {
+  background-color: #2e3c4a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ok-btn-guest-room:hover {
+  background-color: #9d9691;
+}
+
+/* Modal Responsive Styles */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .selection-guest-room {
+    font-size: 18px;
+  }
+
+  .guest-option-adults label,
+  .guest-option-children label {
+    font-size: 14px;
+  }
+
+  .counter-adults,
+  .counter-children {
+    gap: 8px;
+  }
+
+  .modal-action-btn {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cancel-btn-guest-room,
+  .ok-btn-guest-room {
+    width: 100%;
+    padding: 12px;
+  }
+}

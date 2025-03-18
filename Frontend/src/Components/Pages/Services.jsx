@@ -9,9 +9,7 @@ export default function Services() {
     const ServiceContainer = [
         { serviceImage: ServicesRoom, servicesTitle: "Hotel Rooms" },
         { serviceImage: ResturentCatering, servicesTitle: "Resturent/Catering" }
-
-
-    ];
+        ];
 
     return (
         <div className="services-container">
