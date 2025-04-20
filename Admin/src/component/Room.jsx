@@ -58,20 +58,7 @@ function Room() {
       [type]: checked ? [...prev[type], id] : prev[type].filter((item) => item !== id),
     }));
   };
-  const [rooms, setRooms] = useState([]);
-  const fetchRooms = async () => {
-    try {
-      const response = await axios.get("http://localhost:4000/api/room/getRoom");
-      console.log("fetch",response.data.rooms);
-      setRooms(response.data.rooms);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-  useEffect(() => {
-    
-    fetchRooms();
-  }, []);
+  
 
   const [editId, setEditId] = useState(null);
 
@@ -152,7 +139,20 @@ function Room() {
 
   //get room
 
-  
+  const [rooms, setRooms] = useState([]);
+  const fetchRooms = async () => {
+    try {
+      const response = await axios.get("http://localhost:4000/api/room/getRoom");
+      console.log("fetch",response.data.rooms);
+      setRooms(response.data.rooms);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    
+    fetchRooms();
+  }, []);
 
   //delete room
 
@@ -307,7 +307,7 @@ function Room() {
 
               <div className="grid grid-cols-1 gap-4 mb-4">
                 <label className="text-gray-700 font-medium">Facilities</label>
-                {console.log(facilities)}
+                {/* {console.log(facilities)} */}
                 {facilities.map((facility) => (
                   <div key={facility._id} className='flex gap-2'>
                     <input type="checkbox" id={facility.title} onChange={(e) => handleCheckbox(e, 'facilities')} className="h-5 w-5" />

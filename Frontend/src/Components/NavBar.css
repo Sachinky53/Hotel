@@ -321,7 +321,7 @@
 }
 
 @media (max-width: 768px) {
-  .nav-bar {
+   .nav-bar {
     padding: 15px;
   }
   .right-nav {
@@ -350,11 +350,14 @@
     flex-direction: column;
     gap: 20px;
     z-index: 1000;
+    pointer-events: none;
   }
 
   .nav-center.active {
     transform: translateX(0);
+    pointer-events: auto;
   }
+
 
   .nav-center-option {
     flex-direction: column;
@@ -370,7 +373,7 @@
 
   .nav-center-option li a {
     font-size: 18px;
-  }
+  } 
 
   .admin-control {
     position: absolute;

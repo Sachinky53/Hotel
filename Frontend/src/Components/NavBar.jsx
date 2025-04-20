@@ -81,21 +81,9 @@ export default function NavBar() {
   };
 
   //profile close if we any where outside the profile
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (profileRef.current && !profileRef.current.contains(event.target)) {
-        setProfileOpen(false);
-        setIsOpen(false);
-      }
-
-    }
-    //when i scroll it should close
-   
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-  },[])
+   // ✅ Dependencies added
+  
+  
   // Handle input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -165,15 +153,7 @@ export default function NavBar() {
     setSignupOpen(false);
   }
   //when i click anywhere outside the profile it should close
-  const handleOutsideClick = (e) => {
-    if (e.target.classList.contains("admin-control")) {
-      setProfileOpen(false);
-    }
-  }
-  const handleNavClick = (path) => {
-    navigate(path);
-    setIsOpen(false);  // Close the menu
-  };
+ 
   
   return (
     <>
@@ -186,7 +166,7 @@ export default function NavBar() {
           <h2 > Hotelier</h2>
         </div>
 
-        <div className={`nav-center ${isOpen ? "active" : ""} `}>
+        <div className={`nav-center ${isOpen ? "active" : ""}`}>
           <ul className="nav-center-option">
             <li ><Link to="/">Home</Link></li>
             <li ><Link to="/hotel">Hotels</Link></li>

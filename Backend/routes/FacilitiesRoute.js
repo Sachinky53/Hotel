@@ -19,6 +19,6 @@ const storage = multer.diskStorage({
 
 router.post("/createFacilities",upload.single("icon"), createFacilities);
 router.get("/getFacilities", getFacilities);
-router.delete("/deleteFacilities:id", deleteFacilities);
+router.delete("/deleteFacilities/:id", deleteFacilities);
 
 module.exports = router;

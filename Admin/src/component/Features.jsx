@@ -139,7 +139,7 @@ function Features() {
 
     const handleFacilieteDelete = async (id) => {
       try {
-        const response = await axios.delete(`http://localhost:4000/api/faciliete/deleteFaciliete${id}`);
+        const response = await axios.delete(`http://localhost:4000/api/facilities/deleteFacilities/${id}`);
         console.log(response.data);
         // Show success message using SweetAlert2
         if (response.status === 200) {
@@ -176,7 +176,7 @@ function Features() {
 
       useEffect(() => {
         fetchFacilities();
-      },[]);
+      },[fetchFacilities]);
   return (
     <div>
       <div className='crousel-heading flex justify-between'>
