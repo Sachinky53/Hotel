@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Gallery.css";
 import gallery01 from "/GalleryImage/gallery01.jpg";
 import gallery02 from "/GalleryImage/gallery02.jpg";
-import gallery03 from "/GalleryImage/gallery03.jpg";
+// import gallery03 from '/GalleryImage/gallery03.jpg';
 import gallery04 from "/GalleryImage/gallery04.jpg";
 import gallery05 from "/GalleryImage/gallery05.jpg";
 import gallery06 from "/GalleryImage/gallery06.jpg";
@@ -18,16 +18,16 @@ function Gallery() {
     const [viewAll, setViewAll] = useState(false); // View All toggle
 
     const GalleryData = [
-        { id: 1, imgSrc: gallery01 },
-        { id: 2, imgSrc: gallery02 },
-        { id: 3, imgSrc: gallery03 },
-        { id: 4, imgSrc: gallery04 },
-        { id: 5, imgSrc: gallery05 },
-        { id: 6, imgSrc: gallery06 },
-        { id: 7, imgSrc: gallery07 },
-        { id: 8, imgSrc: gallery08 },
-        { id: 9, imgSrc: gallery09 },
-        { id: 10, imgSrc: gallery10 }
+        { imgSrc: gallery01 },
+        { imgSrc: gallery02 },
+        // { imgSrc: gallery03 },
+        { imgSrc: gallery04 },
+        { imgSrc: gallery05 },
+        { imgSrc: gallery06 },
+        { imgSrc: gallery07 },
+        { imgSrc: gallery08 },
+        { imgSrc: gallery09 },
+        { imgSrc: gallery10 }
     ];
 
     const getImg = (imgSrc) => {
@@ -56,8 +56,8 @@ function Gallery() {
 
                 {/* Image Gallery */}
                 <div className="gallery">
-                    {GalleryData.slice(0, viewAll ? GalleryData.length : 6).map((item) => (
-                        <div className="pics" key={item.id} onClick={() => getImg(item.imgSrc)}>
+                    {GalleryData.slice(0, viewAll ? GalleryData.length : 6).map((item,index) => (
+                        <div className="pics" key={index} onClick={() => getImg(item.imgSrc)}>
                             <img src={item.imgSrc} alt={`Gallery Image ${item.id}`} />
                         </div>
                     ))}
