@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "../NavBar";
 import "./Hotels.css";
+import Footer from "../Footer";
 
 const Hotels = () => {
   const [modelOpen, setModelOpen] = useState(false);
@@ -131,6 +132,9 @@ const Hotels = () => {
             </div>
           </div>
         )}
+      </div>
+      <div className="fotter-section-hotel" >
+      <Footer />
       </div>
     </>
   );

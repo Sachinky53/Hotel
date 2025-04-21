@@ -93,6 +93,9 @@
 .search-button:hover {
   background: #9d9691;
 }
+.fotter-section-hotel{
+margin-top: 100px;
+}
 
 /* Media Queries */
 @media (max-width: 480px) {
