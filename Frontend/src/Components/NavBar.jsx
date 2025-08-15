@@ -170,7 +170,6 @@ export default function NavBar() {
           <ul className="nav-center-option">
             <li ><Link to="/">Home</Link></li>
             <li ><Link to="/hotel">Hotels</Link></li>
-            <li ><a href="#">Services</a></li>
             <li ><Link to="/ourRooms">OurRooms</Link></li>
             <li ><Link to="/contact">Contact Us</Link></li>
 

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import NavBar from '../NavBar'
 import './OurRoom.css'
-import Footer from '../Footer'
 import BookNow from '../BookNow';
 import axios from 'axios';
+import Footer from '../Footer';
 
 
 function OurRooms() {
@@ -234,7 +234,7 @@ const handleFacilityChange = (facility) => {
        
       </div>
       {bookNow && <BookNow onClose={() => setBookNow(false)}/>}
-      <Footer />
+        <Footer />
     </>
   )
 }

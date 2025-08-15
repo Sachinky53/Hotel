@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import NavBar from "../NavBar";
-import "./Hotels.css";
-import Footer from "../Footer";
+import Footer from '../Footer'
 
+import "./Hotels.css";
 const Hotels = () => {
   const [modelOpen, setModelOpen] = useState(false);
   const [adults, setAdults] = useState(1);
@@ -133,9 +133,7 @@ const Hotels = () => {
           </div>
         )}
       </div>
-      <div className="fotter-section-hotel" >
-      <Footer />
-      </div>
+              <Footer/>
     </>
   );
 };
