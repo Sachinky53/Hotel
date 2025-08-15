@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import NavBar from "../NavBar";
-import Footer from '../Footer'
 
 import "./Hotels.css";
 const Hotels = () => {
@@ -133,7 +132,6 @@ const Hotels = () => {
           </div>
         )}
       </div>
-              <Footer/>
     </>
   );
 };
